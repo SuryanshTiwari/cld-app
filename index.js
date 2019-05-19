@@ -6,16 +6,20 @@ module.exports = () => {
 
   switch (cmd) {
     case 'def':
-      require('./cmds/def')(args)
+      var res = require('./cmds/def')(args);
+      res.then((res1)=>console.log("Definition : ", res1));
       break
     case 'ant':
-      require('./cmds/ant')(args)
+      var res = require('./cmds/ant')(args);
+      res.then((res1)=>console.log("Antonyms : ", res1));
       break
     case 'syn':
-      require('./cmds/syn')(args)
+      var res = require('./cmds/syn')(args);
+      res.then((res1)=>console.log("Synonyms : ", res1));
       break
     case 'ex':
-      require('./cmds/ex')(args)
+      var res = require('./cmds/ex')(args);
+      res.then((res1)=>console.log("Examples : ", res1));
       break
     case 'dict':
       require('./cmds/ex')(args)

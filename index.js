@@ -14,8 +14,20 @@ module.exports = () => {
     case 'syn':
       require('./cmds/syn')(args)
       break
+    case 'ex':
+      require('./cmds/ex')(args)
+      break
+    case 'dict':
+      require('./cmds/ex')(args)
+      require('./cmds/def')(args)
+      require('./cmds/syn')(args)
+      require('./cmds/ant')(args)
+      break
+    case 'wod':
+      require('./cmds/wod')(args)
+      break
     default:
-      console.error(`"${cmd}" is not a valid command!`)
+      require('./cmds/wodDict')(args)
       break
   }
-}
+};

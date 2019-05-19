@@ -9,10 +9,10 @@ module.exports = (args) => {
             console.log(err);
         }
         if(body[0] && body[0].relationshipType == 'antonym')
-            console.log( body[0].words );
+            console.log( "Antonyms : ", body[0].words );
         else if(body[1] && body[1].relationshipType == 'antonym')
-            console.log( body[1].words);
+            console.log( "Antonyms : ", body[1].words);
         else
-            console.log("Antonyms for this word not found");
+            console.log("Antonyms : ", "Antonyms for this word not found");
     });
 }

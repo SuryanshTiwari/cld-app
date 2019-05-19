@@ -9,10 +9,10 @@ module.exports = (args) => {
             console.log(err);
         }
         if(body[0] && body[0].relationshipType == 'synonym')
-            console.log(body[0].words);
+            console.log("Synonyms : ", body[0].words);
         else if(body[1] && body[1].relationshipType == 'synonym')
-            console.log(body[1].words);
+            console.log("Synonyms : ", body[1].words);
         else
-            console.log("Synonyms for this word not found");
+            console.log("Synonyms : ", "Synonyms for this word not found");
     });
 }

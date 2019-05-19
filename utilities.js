@@ -1,6 +1,7 @@
 const fs = require("fs");
 var request = require('request');
 var constant = require("./constant");
+const inquirer = require('inquirer')
 
 module.exports = class utilities {
     getRandomInt(max) {
@@ -18,4 +19,6 @@ module.exports = class utilities {
             });
         });
     }
+
+   
 }

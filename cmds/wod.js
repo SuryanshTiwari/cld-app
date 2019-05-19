@@ -10,9 +10,7 @@ module.exports =  async(args) => {
     for(var i = 0; ;i++){
         var word = await this.utilities.generateWord();
         if(c == idx){
-            // console.log(word.word);
             args._[0] = word.word
-            // console.log(args);
             return args;
         }
         c++;

@@ -7,28 +7,29 @@ module.exports = () => {
   switch (cmd) {
     case 'def':
       var res = require('./cmds/def')(args);
-      res.then((res1)=>console.log("Definition : ", res1));
+      res.then((def)=>console.log("Definition : ", def));
       break
     case 'ant':
       var res = require('./cmds/ant')(args);
-      res.then((res1)=>console.log("Antonyms : ", res1));
+      res.then((ant)=>console.log("Antonyms : ", ant));
       break
     case 'syn':
       var res = require('./cmds/syn')(args);
-      res.then((res1)=>console.log("Synonyms : ", res1));
+      res.then((syn)=>console.log("Synonyms : ", syn));
       break
     case 'ex':
       var res = require('./cmds/ex')(args);
-      res.then((res1)=>console.log("Examples : ", res1));
+      res.then((ex)=>console.log("Examples : ", ex));
       break
     case 'dict':
-      require('./cmds/ex')(args)
-      require('./cmds/def')(args)
-      require('./cmds/syn')(args)
-      require('./cmds/ant')(args)
+      require('./cmds/fullDict')(args);
       break
     case 'wod':
       require('./cmds/wod')(args)
+      break
+    case 'play':
+      var wordGame = require('./cmds/wordGame');
+      wordGame.play(args);
       break
     default:
       require('./cmds/wodDict')(args)
